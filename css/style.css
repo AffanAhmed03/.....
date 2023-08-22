@@ -1,0 +1,487 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Small  */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+
+    }
+}
+
+/* Medium  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+body{
+    background-image: url(https://wallpaperaccess.com/full/660790.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* start header  */
+header {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+header .container nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header .container nav ul {
+        z-index: 1000;
+        display: flex;
+}
+@media(max-width: 767px) {
+    header .container nav ul {
+        display: none;
+    }
+    header .container nav i:hover+ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+    }
+header .container nav i {
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+@media(min-width: 768px) {
+    header .container nav i {
+        display: none;
+    }
+}
+header .container nav ul li {
+    list-style-type: none;
+    padding: 20px;
+    position: relative;
+}
+header .container nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+header .container nav ul li:hover::before {
+    width: 100%;
+}
+header .container nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* end header  */
+
+/* start landing */
+.landing {
+    background-image: url(https://www.maggianolaw.com/wp-content/uploads/2020/06/construction-site-safety-and-responsibility-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-top: 1px;
+    position: relative;
+    z-index: -1;
+    border-bottom: 1px solid grey;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.286);
+}
+.landing .container .text {
+    padding: 20px;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.296);
+}
+.landing .container .text h1 {
+    font-size: 40px;
+    color: rgb(138, 83, 138);
+    font-weight: bolder;
+}
+.landing .container .text p {
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 2;
+    color: rgb(138, 83, 138);
+}
+
+/* end landing */
+
+/* start why us  */
+
+.why-us {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-bottom: 1px solid grey;
+}
+.why-us .container h1 {
+    font-size: 40px;
+    color: rgb(188, 153, 215);
+    font-weight: bolder;
+}
+.why-us .container .grid-box {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+@media(max-width: 767px) {
+    .why-us .container .grid-box {
+        grid-template-columns: minmax(250px, 1fr);
+    }
+}
+.why-us .container .grid-box div {
+    padding: 20px;
+    text-align: left;
+    background-color: rgb(162, 73, 162);
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
+}
+.why-us .container .grid-box div:hover {
+    margin-top: -10px;
+    border: 2px solid white;
+}
+.why-us .container .grid-box div h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.why-us .container .grid-box div p {
+    margin-top: 20px;
+    color: white;
+    line-height: 1.8;
+}
+
+/* end why us  */
+
+/* start services */
+
+.services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-bottom: 1px solid grey;
+}
+.services .container h1 {
+    font-size: 40px;
+    color: rgb(188, 153, 215);
+    font-weight: bolder;
+}
+.services .container .grid-box {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.services .container .grid-box div {
+    padding: 20px;
+    text-align: left;
+}
+.services .container .grid-box div h3 {
+    color: rgb(188, 153, 215);
+    font-size: 30px;
+}  
+.services .container .grid-box div ul li {
+    color: rgb(188, 153, 215);
+    margin-top: 25px;
+    list-style-type: circle white ;
+    margin-left: 20px;
+} 
+
+/* end services */
+
+/* start work  */
+
+.work {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.work .container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 20px;
+    border: 1px solid grey;
+}
+.work .container .grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+@media(max-width: 767px) {
+    .work .container .grid-box {
+        grid-template-columns: minmax(250px, 1fr);
+    }
+}
+.work .container h1 {
+    font-size: 40px;
+    color: rgb(188, 153, 215);
+    font-weight: bolder;
+}
+.work .container div img {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    
+}
+@media(max-width: 767px) {
+    .work .container div img  {
+        width: 230px;
+        height: 140px;
+    }
+}
+.work .container div h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(188, 153, 215);
+    font-size: 30px;
+}
+.work .container div p {
+    margin-top: 20px;
+    color: white;
+    line-height: 1.8;
+}
+
+/* end work  */
+
+/* start client  */
+
+.client {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-bottom: 1px solid grey;
+}
+.client .container h1 {
+    font-size: 40px;
+    color: rgb(188, 153, 215);
+    font-weight: bolder;
+}
+.client .container .grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+@media(max-width: 767px) {
+    .client .container .grid-box{
+        grid-template-columns: minmax(250px, 1fr);
+    }
+}
+.client .container .grid-box>div {
+    padding: 20px;
+}
+.client .container .grid-box div h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(188, 153, 215);
+    font-size: 30px;
+}
+.client .container .grid-box div ul li {
+    color: rgb(188, 153, 215);
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.client .container .grid-box .text1,
+.client .container .grid-box .text2 {
+    padding: 0 0 0 20px;
+    position: relative;
+}
+.client .container .grid-box .text2 {
+    margin-top: 20px;
+}
+.client .container .grid-box .text1::before,
+.client .container .grid-box .text2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: rgb(162, 73, 162);
+}
+.client .container .grid-box .text1 p,
+.client .container .grid-box .text2 p {
+    color: rgb(188, 153, 215);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* end client  */
+
+/* start about us  */
+
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-bottom: 1px solid grey;
+}
+.about .container h1 {
+    font-size: 40px;
+    color: rgb(188, 153, 215);
+    font-weight: bolder;
+}
+.about .container .grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+@media(max-width: 767px) {
+    .about .container .grid-box {
+        grid-template-columns: minmax(250px, 1fr);
+    }
+}
+.about .container .grid-box div {
+    padding: 20px;
+    text-align: left;
+    background-color: rgb(162, 73, 162);
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
+    margin-top: 30px;
+}
+.about .container .grid-box div h3 {
+    font-size: 30px;
+    color: white;
+}
+.about .container .grid-box div p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+.about .container .grid-box div ul li {
+    color: white;
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+/* end about us  */
+
+/* start get in touch */
+
+.last {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    border-bottom: 1px solid grey;
+}
+.last .container h1 {
+    font-size: 40px;
+    color: rgb(188, 153, 215);
+    font-weight: bolder;
+}
+.last .container p {
+    color: white;
+    font: 20px;
+    margin-top: 25px;
+}
+.last .container ul li {
+    color: white;
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+.last .container .icons {
+    margin-top: 20px;
+}
+.last .container .icons i {
+    color: rgb(138, 83, 138);
+    font-size: 22px;
+    padding: 5px;
+    transition: 0.8s;
+    margin-left: 15px;
+}
+.last .container .icons i:hover {
+    transform: rotate(360deg) scale(1.5);
+}
+
+/* end get in touch */
+
+
+
+
+
